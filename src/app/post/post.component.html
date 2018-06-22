@@ -1,0 +1,21 @@
+
+<form enctype="multipart/form-data">
+    <label class="file">
+        <input type="file" id="file" (change)="uploadFile($event)" accept="image/*" multiple>
+        <span class="file-custom"></span>
+    </label>
+    <div id="previewImages" className="form-row">
+	</div>
+    <form>
+      <fieldset class="form-group">
+        <label for="form-1">Example label</label>
+        <input type="text" class="form-control" id="form-1" [(ngModel)]="name" [value]="" [ngModelOptions]="{standalone:true}" placeholder="Example input">
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="form-2">Another label</label>
+        <input type="text" class="form-control" id="form-2" [(ngModel)]="email" [value]="" [ngModelOptions]="{standalone:true}" placeholder="Another input">
+      </fieldset>
+    </form>
+
+    <button type="submit" class="btn btn-primary" (click)="createPost()">Upload</button>
+</form>
